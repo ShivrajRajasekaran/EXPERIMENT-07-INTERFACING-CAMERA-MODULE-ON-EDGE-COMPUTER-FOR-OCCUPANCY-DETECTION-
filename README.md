@@ -1,5 +1,7 @@
 # EXPERIMENT-07-INTERFACING-CAMERA-MODULE-ON-EDGE-COMPUTER-FOR-OCCUPANCY-DETECTION-
-
+## Name: SHIVRAJ R
+## REG NO: 212223110051
+## DATE: 02.09.2026
 
 ### AIM:
 To interface a USB/CSI camera module with an edge computing platform (e.g., Raspberry Pi, Jetson Nano, etc.) and implement an occupancy detection system using the Histogram of Oriented Gradients (HOG) algorithm.
@@ -91,13 +93,12 @@ cv2.destroyAllWindows()
 
 ### SCREEN SHOTS OF OUTPUT 
 
-
-
+<img width="1864" height="1079" alt="Screenshot 2026-08-17 154721" src="https://github.com/user-attachments/assets/077a1d58-ca63-4b51-8077-a7bbebf8b058" />
 
 
 ### RASPI INTERFACE 
 
-
+<img width="764" height="1266" alt="image" src="https://github.com/user-attachments/assets/4a27bc47-6190-4b70-9036-2336bbed30de" />
 
 
 ### Result:
