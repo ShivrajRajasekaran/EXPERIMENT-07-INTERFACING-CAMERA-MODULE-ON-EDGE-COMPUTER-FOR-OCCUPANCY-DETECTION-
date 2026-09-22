@@ -53,13 +53,10 @@ Write the Python code to initialize the camera and implement the HOG algorithm.
 Run the code and verify that the system detects human presence and draws bounding boxes.
 
  ###  Python Code:
- ``
+ 
+ ```
 import cv2
 import imutils
-
-# ==========================================
-# Android DroidCam URL
-# ==========================================
 
 # Replace with your Android phone IP
 url = "http://172.17.159.4:4747/video"
@@ -74,16 +71,10 @@ if not cap.isOpened():
 
 print("Android Camera Connected Successfully")
 
-# ==========================================
-# Initialize HOG Person Detector
-# ==========================================
 
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
-# ==========================================
-# Main Loop
-# ==========================================
 
 while True:
 
@@ -96,10 +87,6 @@ while True:
 
     # Resize frame
     frame = imutils.resize(frame, width=640)
-
-    # ==========================================
-    # Detect People
-    # ==========================================
 
     rects, weights = hog.detectMultiScale(
         frame,
@@ -132,11 +119,6 @@ while True:
             (0, 255, 0),
             2
         )
-
-    # ==========================================
-    # Occupancy Status
-    # ==========================================
-
     if person_count > 0:
         status = "OCCUPIED"
         color = (0, 0, 255)
@@ -164,10 +146,6 @@ while True:
         2
     )
 
-    # ==========================================
-    # Show Output
-    # ==========================================
-
     cv2.imshow("Android Occupancy Detection", frame)
 
     # Press q to exit
@@ -176,7 +154,7 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
- ``
+ ```
 
 
 ### SCREEN SHOTS OF OUTPUT 
